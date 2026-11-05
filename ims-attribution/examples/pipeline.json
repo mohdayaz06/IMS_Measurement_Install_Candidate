@@ -1,0 +1,9 @@
+{
+  "jobs": [
+    {"id":"shopify-reconciliation","tenant":"CLIENT_ID","kind":"shopify_reconcile","options":{"days":14,"end_days_ago":0,"token_env":"CLIENT_SHOPIFY_TOKEN","version_env":"SHOPIFY_API_VERSION"}},
+    {"id":"google-spend","tenant":"CLIENT_ID","kind":"google_spend","options":{"days":7},"environment":{"GOOGLE_ADS_CUSTOMER_ID":"CLIENT_GOOGLE_ACCOUNT","GOOGLE_ADS_REFRESH_TOKEN":"CLIENT_GOOGLE_REFRESH_TOKEN"}},
+    {"id":"meta-spend","tenant":"CLIENT_ID","kind":"meta_spend","options":{"days":7},"environment":{"META_AD_ACCOUNT_ID":"CLIENT_META_ACCOUNT","META_ACCESS_TOKEN":"CLIENT_META_TOKEN"}},
+    {"id":"publish-last-touch","tenant":"CLIENT_ID","kind":"bigquery_export","options":{"days":365,"table":"project-id:client_safe.attribution_last_touch","model":"last_touch"}},
+    {"id":"publish-ctv","tenant":"CLIENT_ID","kind":"bigquery_export","options":{"days":30,"table":"project-id:client_safe.ctv_association","report_kind":"ctv","window_hours":168}}
+  ]
+}

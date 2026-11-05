@@ -1,0 +1,6 @@
+{
+  "client1": [
+    {"id":"google-import","type":"google_ads","enabled":false,"api_version":"REPLACE_SUPPORTED_VERSION","customer_id":"REPLACE_CUSTOMER_ID","conversion_action_id":"REPLACE_IMPORT_ACTION_ID","credential_prefix":"GOOGLE_ADS","developer_token_env":"GOOGLE_ADS_DEVELOPER_TOKEN","validate_only":true,"max_age_hours":72},
+    {"id":"meta-purchase","type":"meta","enabled":false,"api_version":"REPLACE_SUPPORTED_VERSION","pixel_id":"REPLACE_PIXEL_ID","token_env":"META_ACCESS_TOKEN","test_event_code":"REPLACE_TEST_CODE","max_age_hours":72}
+  ]
+}

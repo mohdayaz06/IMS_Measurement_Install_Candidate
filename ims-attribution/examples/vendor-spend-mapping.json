@@ -1,0 +1,11 @@
+{
+  "fields": {
+    "date": "Report Date",
+    "campaign": "Campaign ID",
+    "cost": "Media Spend",
+    "impressions": "Impressions",
+    "clicks": "Clicks"
+  },
+  "constants": {"currency": "USD"},
+  "cost_multiplier": "1"
+}

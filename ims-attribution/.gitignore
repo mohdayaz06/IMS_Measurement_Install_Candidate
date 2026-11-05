@@ -1,0 +1,6 @@
+*.sqlite3*
+*.env
+*credentials*.json
+__pycache__/
+exports/
+*.csv.tmp

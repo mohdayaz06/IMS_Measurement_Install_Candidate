@@ -1,0 +1,20 @@
+{
+  "api_origin": "https://tracking.example.com",
+  "copy_environment": ["SHOPIFY_ADMIN_ACCESS_TOKEN", "SHOPIFY_API_VERSION", "GOOGLE_ADS_API_VERSION", "GOOGLE_ADS_DEVELOPER_TOKEN", "GOOGLE_ADS_CLIENT_ID", "GOOGLE_ADS_CLIENT_SECRET", "GOOGLE_ADS_REFRESH_TOKEN", "GOOGLE_ADS_CUSTOMER_ID", "META_API_VERSION", "META_AD_ACCOUNT_ID", "META_ACCESS_TOKEN"],
+  "tenants": [{
+    "id": "client1",
+    "currency": "USD",
+    "timezone": "America/New_York",
+    "store_origins": ["https://store.example.com"],
+    "sgtm_origin": "https://tags.example.com",
+    "shopify": {"shop":"replace.myshopify.com","webhook_secret_env":"SHOPIFY_WEBHOOK_SECRET","token_env":"SHOPIFY_ADMIN_ACCESS_TOKEN","version_env":"SHOPIFY_API_VERSION"},
+    "google": {"spend":true},
+    "meta": {"spend":true},
+    "simplifi": {
+      "browser_tag": null,
+      "feeds": [{"type":"spend","path":"/feeds/simplifi-display.csv","max_age_hours":48,"channel":"simplifi","mapping":{"fields":{"date":"Date","campaign":"Campaign ID","cost":"Spend","impressions":"Impressions","clicks":"Clicks"},"constants":{"currency":"USD"}}}]
+    },
+    "native_destinations": [],
+    "sgtm_purchase_forwarding": true
+  }]
+}

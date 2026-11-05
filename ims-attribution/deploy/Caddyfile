@@ -1,0 +1,14 @@
+# Replace domains; configure TLS/DNS and external WAF policy before production.
+tracking.example.com {
+    request_body {
+        max_size 1MB
+    }
+    header {
+        Strict-Transport-Security "max-age=31536000"
+        X-Content-Type-Options "nosniff"
+        Referrer-Policy "no-referrer"
+    }
+    reverse_proxy 127.0.0.1:8080
+    # Access logging intentionally disabled. Add redacted monitoring separately.
+    # Rate limiting/WAF and admin restrictions require deployment-specific setup.
+}

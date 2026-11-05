@@ -1,0 +1,16 @@
+{
+  "timeZone": "Etc/UTC",
+  "exceptionLogging": "NONE",
+  "runtimeVersion": "V8",
+  "oauthScopes": ["https://www.googleapis.com/auth/script.external_request"],
+  "urlFetchWhitelist": ["https://tracking.example.com/"],
+  "dataStudio": {
+    "name": "IMS Measurement",
+    "logoUrl": "https://www.gstatic.com/images/branding/product/1x/looker_studio_48dp.png",
+    "company": "Insight Media Stream",
+    "companyUrl": "https://insightmediastream.com",
+    "addonUrl": "https://insightmediastream.com",
+    "supportUrl": "https://insightmediastream.com",
+    "description": "Client-safe attribution, CTV association and approved incremental measurement."
+  }
+}

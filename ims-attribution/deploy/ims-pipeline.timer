@@ -1,0 +1,8 @@
+[Unit]
+Description=Hourly IMS reporting schedule
+[Timer]
+OnCalendar=hourly
+Persistent=true
+RandomizedDelaySec=120
+[Install]
+WantedBy=timers.target
