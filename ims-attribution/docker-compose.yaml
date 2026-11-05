@@ -1,0 +1,47 @@
+services:
+
+  backend:
+    build:
+      context: .
+      dockerfile: ims/Dockerfile
+
+    container_name: ims-backend
+    restart: unless-stopped
+
+    environment:
+      IMS_DB: /data/ims.sqlite3
+
+    volumes:
+      - ims_data:/data
+
+    expose:
+      - "8080"
+
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8080/ready', timeout=3)"
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 15s
+
+  frontend:
+    build:
+      context: .
+      dockerfile: web/Dockerfile
+
+    container_name: ims-frontend
+    restart: unless-stopped
+
+    ports:
+      - "80:80"
+
+    depends_on:
+      backend:
+        condition: service_healthy
+
+volumes:
+  ims_data:
